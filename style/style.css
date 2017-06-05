@@ -25,6 +25,7 @@ body{
     color:#fff;
 }
 .modal-body{
+    text-align: center;
     padding: 20px 20px 0 20px;
     font-size: 16px;
 }

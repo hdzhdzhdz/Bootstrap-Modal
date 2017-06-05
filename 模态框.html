@@ -11,11 +11,6 @@
 <body>
 
 <form role="form">
-	<div class="form-group">
-		<label for="name">联系方式</label>
-		<input type="text" class="form-control" id="num" 
-			   placeholder="请输入联系方式" pattern="((\+?86)|(\(\+86\)))?(13[0-9]{9}|14[579][0-9]{8}|15[012356789][0-9]{8}|17[0135678][0-9]{8}|18[0-9]{9})" required  />
-	</div>
 	<button class="btn btn-primary btn-lg" id="submit" data-toggle="modal" data-target="#myModal" type="submit">
 	开始演示模态框
     </button>
@@ -32,7 +27,7 @@
 				</h4>
 			</div>
 			<div class="modal-body">
-				请输入正确的联系方式
+			    提示内容
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">
@@ -42,5 +37,18 @@
 		</div><!-- /.modal-content -->
 	</div><!-- /.modal -->
 </div>
+<!--弹出模态框实现方法-->
+<script type="text/javascript">
+    function modal_body(body){
+        $('#myModal').modal({
+        show:true,
+        backdrop:true
+        })
+        $('#myModal .modal-body').text(function(){
+            return body;
+        });
+    };
+        modal_body("1");
+</script>
 </body>
 </html>
